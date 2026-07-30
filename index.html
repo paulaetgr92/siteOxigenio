@@ -1,0 +1,438 @@
+from pathlib import Path
+
+html = """<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a51f2a">
+  <meta
+          name="description"
+          content="Lojas Oxigênio — moda, casa, calçados e acessórios em uma experiência editorial."
+  >
+
+  <title>Lojas Oxigênio</title>
+
+  <link rel="stylesheet" href="css/styles.css?v=50">
+  <script defer src="js/app.js?v=50"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#categorias">
+  Ir para as categorias
+</a>
+
+<!-- ABERTURA -->
+<header class="hero" id="inicio">
+  <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="assets/images/hero-poster.svg"
+          aria-hidden="true"
+  >
+    <source
+            src="assets/video/hero-oxigenio.mp4"
+            type="video/mp4"
+    >
+  </video>
+
+  <div class="hero__veil"></div>
+
+  <nav class="topbar" aria-label="Navegação principal">
+    <button
+            class="icon-button menu-trigger"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-overlay"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a
+            class="brand"
+            href="#inicio"
+            aria-label="Lojas Oxigênio — início"
+    >
+      <span class="brand__small">LOJAS</span>
+      <span class="brand__main">OXIGÊNIO</span>
+    </a>
+
+    <button
+            class="search-trigger"
+            type="button"
+            aria-label="Abrir busca"
+            aria-expanded="false"
+            aria-controls="search-overlay"
+    >
+      BUSCAR
+      <span aria-hidden="true"></span>
+    </button>
+  </nav>
+
+  <div class="hero__content">
+    <p class="eyebrow">
+      NOVA TEMPORADA · 2026
+    </p>
+
+    <h1>
+      O novo básico<br>
+      respira estilo.
+    </h1>
+
+    <a class="hero__cta" href="#categorias">
+      Descubra a coleção
+      <span aria-hidden="true">↘</span>
+    </a>
+  </div>
+
+  <div class="hero__rail" aria-hidden="true">
+    <span>OXIGÊNIO</span>
+    <span>MODA</span>
+    <span>CASA</span>
+    <span>ESTILO</span>
+  </div>
+
+  <a
+          class="scroll-cue"
+          href="#categorias"
+          aria-label="Rolar para as categorias"
+  >
+    <span>ROLE</span>
+    <i></i>
+  </a>
+</header>
+
+<main>
+  <!-- CATEGORIAS -->
+  <section
+          class="category-section"
+          id="categorias"
+          aria-labelledby="categorias-title"
+  >
+    <div class="section-heading reveal">
+      <p class="eyebrow eyebrow--red">
+        ENCONTRE SEU ESTILO
+      </p>
+
+      <h2 id="categorias-title">
+        Explore por categoria
+      </h2>
+
+      <p>
+        Uma vitrine digital limpa, editorial e fácil de navegar.
+      </p>
+    </div>
+
+    <div class="category-grid">
+      <!-- FEMININO -->
+      <a
+              class="category-card category-card--01 reveal"
+              href="catalogo.html?setor=feminino"
+              data-category="feminino"
+              aria-label="Abrir catálogo feminino"
+      >
+        <div class="category-card__art">
+          <img
+                  src="assets/images/feminino.jpg"
+                  alt="Moda feminina Lojas Oxigênio"
+                  loading="lazy"
+          >
+        </div>
+
+        <div class="category-card__meta">
+          <span>01</span>
+          <h3>Feminino</h3>
+          <b>VER AGORA ↗</b>
+        </div>
+      </a>
+
+      <!-- MASCULINO -->
+      <a
+              class="category-card category-card--02 reveal"
+              href="catalogo.html?setor=masculino"
+              data-category="masculino"
+              aria-label="Abrir catálogo masculino"
+      >
+        <div class="category-card__art">
+          <img
+                  src="assets/images/masculino.jpg"
+                  alt="Moda masculina Lojas Oxigênio"
+                  loading="lazy"
+          >
+        </div>
+
+        <div class="category-card__meta">
+          <span>02</span>
+          <h3>Masculino</h3>
+          <b>VER AGORA ↗</b>
+        </div>
+      </a>
+
+      <!-- MODA CASA -->
+      <a
+              class="category-card category-card--03 reveal"
+              href="catalogo.html?setor=moda-casa"
+              data-category="moda casa decoração"
+              aria-label="Abrir catálogo de Moda Casa"
+      >
+        <div class="category-card__art">
+          <img
+                  src="assets/images/moda-casa.jpg"
+                  alt="Moda Casa Lojas Oxigênio"
+                  loading="lazy"
+          >
+        </div>
+
+        <div class="category-card__meta">
+          <span>03</span>
+          <h3>Moda Casa</h3>
+          <b>VER AGORA ↗</b>
+        </div>
+      </a>
+
+      <!-- ACESSÓRIOS -->
+      <a
+              class="category-card category-card--04 reveal"
+              href="catalogo.html?setor=acessorios"
+              data-category="acessorios acessórios bolsas cintos"
+              aria-label="Abrir catálogo de acessórios"
+      >
+        <div class="category-card__art">
+          <img
+                  src="assets/images/acessorios.jpg"
+                  alt="Acessórios Lojas Oxigênio"
+                  loading="lazy"
+          >
+        </div>
+
+        <div class="category-card__meta">
+          <span>04</span>
+          <h3>Acessórios</h3>
+          <b>VER AGORA ↗</b>
+        </div>
+      </a>
+
+      <!-- CALÇADOS -->
+      <a
+              class="category-card category-card--05 reveal"
+              href="catalogo.html?setor=calcados"
+              data-category="calçados calcados tênis sandálias sapatos"
+              aria-label="Abrir catálogo de calçados"
+      >
+        <div class="category-card__art">
+          <img
+                  src="assets/images/calcados.jpg"
+                  alt="Calçados Lojas Oxigênio"
+                  loading="lazy"
+          >
+        </div>
+
+        <div class="category-card__meta">
+          <span>05</span>
+          <h3>Calçados</h3>
+          <b>VER AGORA ↗</b>
+        </div>
+      </a>
+
+      <!-- INFANTIL E JUVENIL -->
+      <a
+              class="category-card category-card--06 reveal"
+              href="catalogo.html?setor=infantil"
+              data-category="infantil juvenil crianças criancas"
+              aria-label="Abrir catálogo infantil e juvenil"
+      >
+        <div class="category-card__art">
+          <img
+                  src="assets/images/infantil.jpg"
+                  alt="Moda infantil e juvenil Lojas Oxigênio"
+                  loading="lazy"
+          >
+        </div>
+
+        <div class="category-card__meta">
+          <span>06</span>
+          <h3>Infantil &amp; Juvenil</h3>
+          <b>VER AGORA ↗</b>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CAMPANHA EDITORIAL -->
+  <section
+          class="editorial-strip"
+          aria-label="Destaques da temporada"
+  >
+    <div class="editorial-strip__copy reveal">
+      <p class="eyebrow">
+        THE OXIGÊNIO ISSUE · 01
+      </p>
+
+      <h2>
+        Vermelho não é só uma cor.<br>
+        É uma atitude.
+      </h2>
+
+      <a href="#categorias">
+        Conheça a campanha
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="editorial-strip__visual" aria-hidden="true">
+      <span class="shape shape--one"></span>
+      <span class="shape shape--two"></span>
+      <span class="shape shape--three"></span>
+      <strong>OX / 001</strong>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="service-grid" aria-label="Serviços">
+    <article class="reveal">
+      <span>01</span>
+      <h3>Novidades</h3>
+      <p>
+        Campanhas, tendências e lançamentos em primeira mão.
+      </p>
+    </article>
+
+    <article class="reveal">
+      <span>02</span>
+      <h3>Lojas</h3>
+      <p>
+        Encontre a unidade Oxigênio mais próxima de você.
+      </p>
+    </article>
+
+    <article class="reveal">
+      <span>03</span>
+      <h3>Atendimento</h3>
+      <p>
+        Fale com nossa equipe pelo WhatsApp.
+      </p>
+    </article>
+  </section>
+</main>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+  <a class="footer__brand" href="#inicio">
+    OXIGÊNIO
+  </a>
+
+  <div class="footer__links">
+    <a href="catalogo.html?setor=feminino">Feminino</a>
+    <a href="catalogo.html?setor=masculino">Masculino</a>
+    <a href="catalogo.html?setor=moda-casa">Moda Casa</a>
+    <a href="catalogo.html?setor=acessorios">Acessórios</a>
+    <a href="catalogo.html?setor=calcados">Calçados</a>
+    <a href="catalogo.html?setor=infantil">Infantil &amp; Juvenil</a>
+  </div>
+
+  <div class="footer__bottom">
+    <span>Instagram</span>
+    <span>TikTok</span>
+    <small>© 2026 Lojas Oxigênio</small>
+  </div>
+</footer>
+
+<!-- MENU -->
+<aside
+        class="overlay menu-overlay"
+        id="menu-overlay"
+        aria-hidden="true"
+>
+  <button
+          class="overlay__close"
+          type="button"
+          aria-label="Fechar menu"
+  >
+    ×
+  </button>
+
+  <div class="overlay__inner">
+    <p class="eyebrow">MENU</p>
+
+    <nav aria-label="Menu expandido">
+      <a href="catalogo.html?setor=feminino">
+        <span>01</span>
+        Feminino
+      </a>
+
+      <a href="catalogo.html?setor=masculino">
+        <span>02</span>
+        Masculino
+      </a>
+
+      <a href="catalogo.html?setor=moda-casa">
+        <span>03</span>
+        Moda Casa
+      </a>
+
+      <a href="catalogo.html?setor=acessorios">
+        <span>04</span>
+        Acessórios
+      </a>
+
+      <a href="catalogo.html?setor=calcados">
+        <span>05</span>
+        Calçados
+      </a>
+
+      <a href="catalogo.html?setor=infantil">
+        <span>06</span>
+        Infantil &amp; Juvenil
+      </a>
+    </nav>
+  </div>
+</aside>
+
+<!-- BUSCA -->
+<aside
+        class="overlay search-overlay"
+        id="search-overlay"
+        aria-hidden="true"
+>
+  <button
+          class="overlay__close"
+          type="button"
+          aria-label="Fechar busca"
+  >
+    ×
+  </button>
+
+  <form class="search-form" role="search">
+    <label for="site-search">
+      O que você procura?
+    </label>
+
+    <div>
+      <input
+              id="site-search"
+              type="search"
+              autocomplete="off"
+              placeholder="Ex.: feminino, moda casa..."
+      >
+
+      <button type="submit">
+        BUSCAR →
+      </button>
+    </div>
+
+    <p class="search-status" aria-live="polite"></p>
+  </form>
+</aside>
+</body>
+</html>
+"""
+
+out = Path("/mnt/data/index.html")
+out.write_text(html, encoding="utf-8")
+print(out)

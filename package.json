@@ -1,0 +1,20 @@
+{
+  "name": "oxigenio-catalogo-sqlserver",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Site e catálogo das Lojas Oxigênio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:test": "node scripts/test-connection.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mssql": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

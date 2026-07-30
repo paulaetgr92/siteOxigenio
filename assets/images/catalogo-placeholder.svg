@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Imagem indisponível">
+  <rect width="900" height="1200" fill="#efe8e3"/>
+  <circle cx="450" cy="500" r="180" fill="none" stroke="#a51f2a" stroke-width="2" opacity=".3"/>
+  <path d="M330 450h240v300H330zM380 450c0-80 30-130 70-130s70 50 70 130" fill="none" stroke="#a51f2a" stroke-width="5" opacity=".75"/>
+  <text x="450" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#71111a">OXIGÊNIO</text>
+  <text x="450" y="935" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" letter-spacing="5" fill="#706a68">IMAGEM EM BREVE</text>
+</svg>

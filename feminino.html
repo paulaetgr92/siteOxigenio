@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a51f2a">
+  <meta name="description" content="Catálogo feminino das Lojas Oxigênio.">
+  <title>Feminino | Lojas Oxigênio</title>
+  <link rel="stylesheet" href="css/catalogo.css">
+  <script defer src="js/catalogo-feminino.js"></script>
+</head>
+<body>
+  <header class="catalog-header">
+    <a class="catalog-menu" href="index.html#categorias" aria-label="Voltar ao início">←</a>
+
+    <a class="catalog-brand" href="index.html">
+      <small>LOJAS</small>
+      <strong>OXIGÊNIO</strong>
+    </a>
+
+    <button class="catalog-search-trigger" type="button" aria-controls="catalog-search">
+      BUSCAR
+    </button>
+  </header>
+
+  <main>
+    <section class="catalog-hero">
+      <p>COLEÇÃO · FEMININO</p>
+      <h1>Feminino</h1>
+      <span>Peças para vestir todos os seus momentos.</span>
+    </section>
+
+    <section class="catalog-toolbar" aria-label="Filtros do catálogo">
+      <div class="catalog-filters" id="catalog-filters">
+        <button class="is-active" type="button" data-filter="todos">Todos</button>
+      </div>
+
+      <label class="catalog-search" id="catalog-search">
+        <span class="sr-only">Pesquisar produtos</span>
+        <input type="search" placeholder="Buscar uma peça" autocomplete="off">
+      </label>
+    </section>
+
+    <section class="catalog-content" aria-live="polite">
+      <div class="catalog-status" id="catalog-status">Carregando coleção...</div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+  </main>
+
+  <footer class="catalog-footer">
+    <a href="index.html">OXIGÊNIO</a>
+    <span>© 2026 Lojas Oxigênio</span>
+  </footer>
+
+  <template id="product-card-template">
+    <article class="product-card">
+      <a class="product-card__image" href="#">
+        <img src="" alt="" loading="lazy">
+        <span class="product-card__badge" hidden>DESTAQUE</span>
+      </a>
+      <div class="product-card__info">
+        <p class="product-card__category"></p>
+        <h2 class="product-card__name"></h2>
+        <div class="product-card__prices">
+          <span class="product-card__old-price" hidden></span>
+          <strong class="product-card__price"></strong>
+        </div>
+        <p class="product-card__sizes"></p>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

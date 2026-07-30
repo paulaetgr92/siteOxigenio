@@ -1,0 +1,35 @@
+CORREÇÃO V7 — FEMININO SÓ ROUPAS + IMAGENS
+===========================================
+
+Substitua somente:
+
+1. queries/catalogo.sql
+2. server.js
+3. js/catalogo.js
+
+Depois reinicie:
+
+  cd ~/Desktop/oxigenio-site
+  Control + C
+  npm start
+
+Teste:
+
+  http://localhost:8000/api/produtos/feminino?limit=18
+
+No resultado do feminino não devem aparecer:
+- sapatilha
+- tênis
+- sandália
+- chinelo
+- bolsa
+- relógio
+
+Depois abra:
+
+  http://localhost:8000/catalogo.html?setor=feminino
+
+A rota de imagens agora tenta:
+1. imagem do item;
+2. imagem vinculada ao ArtigoId;
+3. imagem de outro item com o mesmo ArtigoId.

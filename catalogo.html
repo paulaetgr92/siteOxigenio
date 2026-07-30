@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Catálogo das Lojas Oxigênio."
+  >
+
+  <title>Catálogo | Lojas Oxigênio</title>
+
+  <link rel="stylesheet" href="css/catalogo.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="marca" href="index.html" aria-label="Lojas Oxigênio">
+      OXIGÊNIO
+    </a>
+
+    <nav class="site-nav" aria-label="Categorias">
+      <a href="catalogo.html?setor=feminino">Feminino</a>
+      <a href="catalogo.html?setor=masculino">Masculino</a>
+      <a href="catalogo.html?setor=moda-casa">Moda Casa</a>
+      <a href="catalogo.html?setor=acessorios">Acessórios</a>
+      <a href="catalogo.html?setor=calcados">Calçados</a>
+      <a href="catalogo.html?setor=infantil">Infantil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="catalogo-hero">
+      <p class="catalogo-eyebrow">Lojas Oxigênio</p>
+
+      <h1 id="catalogo-titulo">Catálogo</h1>
+
+      <p id="catalogo-descricao">
+        Confira as novidades.
+      </p>
+
+      <p id="catalogo-contador" class="catalogo-contador">
+        0 produtos carregados
+      </p>
+    </section>
+
+    <section class="catalogo-conteudo" aria-live="polite">
+      <p
+        id="catalogo-status"
+        class="catalogo-status"
+        hidden
+      ></p>
+
+      <div
+        id="catalogo-grid"
+        class="catalogo-grid"
+      ></div>
+
+      <div class="catalogo-acoes">
+        <button
+          id="carregar-mais"
+          class="carregar-mais"
+          type="button"
+        >
+          Carregar mais produtos
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/catalogo.js" defer></script>
+</body>
+</html>
