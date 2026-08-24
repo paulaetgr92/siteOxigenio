@@ -239,9 +239,9 @@ WHERE
             @setor = 'feminino'
 
             AND (
-                n.nome_norm LIKE '% FEM%'
+                n.nome_norm LIKE 'FEM'
                 OR n.nome_norm LIKE 'FEM%'
-                OR n.nome_norm LIKE '%FEMININ%'
+                OR n.nome_norm LIKE 'FEMININ%'
                 OR n.nome_norm LIKE '%VESTIDO%'
                 OR n.nome_norm LIKE '%SAIA%'
                 OR n.nome_norm LIKE '%CROPPED%'

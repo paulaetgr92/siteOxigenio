@@ -1,0 +1,143 @@
+[
+  {
+    "id": "fem-001",
+    "nome": "brinco",
+    "subcategoria": "brincos/colares/aneis",
+    "preco": 24.99,
+    "imagem": "brinco.png"
+  },
+  {
+    "id": "fem-002",
+    "nome": "brinco",
+    "subcategoria": "brincos/colares/aneis",
+    "preco": 24.99,
+    "imagem": "brinco2.png"
+  },
+  {
+    "id": "brinco",
+    "nome": "brinco",
+    "subcategoria":"brincos/colares/aneis",
+    "preco": 24.99,
+    "imagem": "brinco3.png"
+  },
+  {
+    "id": "fem-004",
+    "nome": "case",
+    "subcategoria": "mochilas",
+    "preco": 39.99,
+    "imagem": "case.png"
+  },
+  {
+    "id": "fem-005",
+    "nome": "chaveiro",
+    "subcategoria": "mochilas",
+    "preco": 24.99,
+    "imagem": "chaveiro.png"
+  },
+  {
+    "id": "fem-006",
+    "nome": "chaveiro",
+    "subcategoria": "mochilas",
+    "preco": 24.99,
+    "imagem": "chaveiro2.png"},
+  {
+    "id": "fem-007",
+    "nome": "colar-brinco",
+    "subcategoria": "colar-brinco",
+    "preco": 69.99,
+    "imagem": "colar-brinco.png"
+  },
+  {
+    "id": "meia",
+    "nome": "meias",
+    "subcategoria": "meias",
+    "preco": 14.99,
+    "imagem": "meia.png"
+
+  },
+  {
+    "id": "fem-008",
+    "nome": "meia",
+    "subcategoria": "meias",
+    "preco": 14.99,
+    "imagem": "meia1.png"
+
+  },
+  {
+    "id": "fem-009",
+    "nome": "meia",
+    "subcategoria": "meias",
+    "preco": 14.99,
+    "imagem": "meia1.png"
+  },
+  {
+    "id": "fem-009",
+    "nome": "meia",
+    "subcategoria": "meias",
+    "preco": 14.99,
+    "imagem": "meia2.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "necessaire",
+    "subcategoria": "mochilas",
+    "preco": 19.99,
+    "imagem": "pochete.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "relogio",
+    "subcategoria": "relogios",
+    "preco": 349.99,
+    "imagem": "relogio.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "relogio",
+    "subcategoria": "relogio",
+    "preco": 349.99,
+    "imagem": "relogio1.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "relogio",
+    "subcategoria": "relogio",
+    "preco": 309.99,
+    "imagem": "relogio2.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "relogio",
+    "subcategoria": "relogio",
+    "preco": 359.99,
+    "imagem": "relogio3.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "relogio",
+    "subcategoria": "relogio",
+    "preco": 99.99,
+    "imagem": "relogio4.png"
+  },
+  {
+    "id": "relogio",
+    "nome": "relogio",
+    "subcategoria": "relogio",
+    "preco": 349.99,
+    "imagem": "relogio5.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "pulseira",
+    "subcategoria": "brinco/colar/pulseira",
+    "preco": 49.99,
+    "imagem": "pulseira.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "case",
+    "subcategoria": "mochilas",
+    "preco": 69.99,
+    "imagem": "case2.png"
+  }
+]

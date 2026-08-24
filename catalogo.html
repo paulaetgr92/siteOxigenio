@@ -1,77 +1,108 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
 
-  <meta
-    name="description"
-    content="Catálogo das Lojas Oxigênio."
-  >
 
   <title>Catálogo | Lojas Oxigênio</title>
 
-  <link rel="stylesheet" href="css/catalogo.css">
+  <link
+          rel="stylesheet"
+          href="css/catalogo.css?v=70"
+  />
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="marca" href="index.html" aria-label="Lojas Oxigênio">
-      OXIGÊNIO
+<header class="site-header">
+  <a
+          class="marca"
+          href="index.html"
+          aria-label="Página inicial das Lojas Oxigênio"
+  >
+    OXIGÊNIO
+  </a>
+
+  <nav
+          class="site-nav"
+          aria-label="Categorias do catálogo"
+  >
+    <a href="catalogo.html?setor=feminino">
+      Feminino
     </a>
 
-    <nav class="site-nav" aria-label="Categorias">
-      <a href="catalogo.html?setor=feminino">Feminino</a>
-      <a href="catalogo.html?setor=masculino">Masculino</a>
-      <a href="catalogo.html?setor=moda-casa">Moda Casa</a>
-      <a href="catalogo.html?setor=acessorios">Acessórios</a>
-      <a href="catalogo.html?setor=calcados">Calçados</a>
-      <a href="catalogo.html?setor=infantil">Infantil</a>
-    </nav>
-  </header>
+    <a href="catalogo.html?setor=masculino">
+      Masculino
+    </a>
 
-  <main>
-    <section class="catalogo-hero">
-      <p class="catalogo-eyebrow">Lojas Oxigênio</p>
+    <a href="catalogo.html?setor=moda-casa">
+      Moda Casa
+    </a>
 
-      <h1 id="catalogo-titulo">Catálogo</h1>
+    <a href="catalogo.html?setor=acessorios">
+      Acessórios
+    </a>
 
-      <p id="catalogo-descricao">
-        Confira as novidades.
-      </p>
+    <a href="catalogo.html?setor=calcados">
+      Calçados
+    </a>
 
-      <p id="catalogo-contador" class="catalogo-contador">
-        0 produtos carregados
-      </p>
-    </section>
+    <a href="catalogo.html?setor=infantil">
+      Infantil
+    </a>
+  </nav>
+</header>
 
-    <section class="catalogo-conteudo" aria-live="polite">
-      <p
-        id="catalogo-status"
-        class="catalogo-status"
-        hidden
-      ></p>
+<main>
+  <section class="catalogo-hero">
+    <p class="catalogo-eyebrow">
+      Lojas Oxigênio
+    </p>
 
-      <div
-        id="catalogo-grid"
-        class="catalogo-grid"
-      ></div>
+    <h1 id="catalogo-titulo">
+      Catálogo
+    </h1>
 
-      <div class="catalogo-acoes">
-        <button
-          id="carregar-mais"
-          class="carregar-mais"
-          type="button"
-        >
-          Carregar mais produtos
-        </button>
-      </div>
-    </section>
-  </main>
+    <p id="catalogo-descricao">
+      Confira as novidades.
+    </p>
 
-  <script src="js/catalogo.js" defer></script>
+    <p
+            id="catalogo-contador"
+            class="catalogo-contador"
+    >
+      0 produtos carregados
+    </p>
+  </section>
+
+  <section
+          class="catalogo-conteudo"
+          aria-live="polite"
+  >
+    <p
+            id="catalogo-status"
+            class="catalogo-status"
+            hidden
+    ></p>
+
+    <div
+            id="catalogo-grid"
+            class="catalogo-grid"
+    ></div>
+
+    <div class="catalogo-acoes">
+      <button
+              id="carregar-mais"
+              class="carregar-mais"
+              type="button"
+              hidden
+      >
+        Carregar mais produtos
+      </button>
+    </div>
+  </section>
+</main>
+
+<script
+        src="js/catalogo.js?v=70"
+        defer
+></script>
 </body>
 </html>

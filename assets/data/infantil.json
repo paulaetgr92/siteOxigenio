@@ -1,0 +1,137 @@
+[
+  {
+    "id": "fem-001",
+    "nome": "camiseta",
+    "subcategoria": "camisetas",
+    "preco": 49.99,
+    "imagem": "camiseta-azul-infant.png"
+  },
+  {
+    "id": "fem-002",
+    "nome": "camiseta",
+    "subcategoria": "camiseta",
+    "preco": 49.99,
+    "imagem": "camiseta-masc-marrom.png"
+  },
+  {
+    "id": "",
+    "nome": "camiseta",
+    "subcategoria":"camiseta",
+    "preco": 39.99,
+    "imagem": "camiseta-masc-vermelha.png"
+  },
+
+  {
+    "id": "fem-005",
+    "nome": "camiseta feminina",
+    "subcategoria": "camisetas",
+    "preco": 39.99,
+    "imagem": "camiseta-meninas.png"
+  },
+  {
+    "id": "fem-006",
+    "nome": "camiseta",
+    "subcategoria": "camiseta",
+    "preco": 29.99,
+    "imagem": "conjunto-menina.png"},
+  {
+    "id": "fem-007",
+    "nome": "conjunto",
+    "subcategoria": "conjuntos",
+    "preco": 49.99,
+    "imagem": "conjunto-infantil.png"
+  },
+  {
+    "id": "conjunto",
+    "nome": "conjunto",
+    "subcategoria": "conjunto",
+    "preco": 149.99,
+    "imagem": "conjunto-rosa-juv.png"
+
+  },
+  {
+    "id": "fem-008",
+    "nome": "cropped",
+    "subcategoria": "blusinhas",
+    "preco": 39.99,
+    "imagem": "cropped.png"
+
+  },
+  {
+    "id": "fem-009",
+    "nome": "regata",
+    "subcategoria": "camisetas",
+    "preco": 19.99,
+    "imagem": "regata-infantil-masc.png"
+  },
+  {
+    "id": "fem-009",
+    "nome": "roupa de banho",
+    "subcategoria": "roupa banho",
+    "preco": 39.99,
+    "imagem": "roupa-banho-infantil.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "shorts",
+    "preco": 49.99,
+    "subcategoria": "calcas/shorts",
+    "imagem": "shorts-infantil.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "vestido ",
+    "subcategoria": "vestidos",
+    "preco": 69.99,
+    "imagem": "vestido-masc-juvenil.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "camisa",
+    "subcategoria": "camisetas",
+    "preco": 59.99,
+    "imagem": "camisa-azul.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "camiseta",
+    "subcategoria": "camiseta",
+    "preco": 29.99,
+    "imagem": "conjunto-menina.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "polo",
+    "subcategoria": "camisetas",
+    "preco": 49.99,
+    "imagem": "polo.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "camiseta",
+    "subcategoria": "camisetas",
+    "preco": 99.99,
+    "imagem": "camisa-azul.png"
+  },
+  {
+    "id": "relogio",
+    "nome": "polo",
+    "subcategoria": "camisetas",
+    "preco": 59.99,
+    "imagem": "polo-floral.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "regata",
+    "subcategoria": "regata",
+    "preco": 39.99,
+    "imagem": "regata-preta.png"
+  },
+  {
+    "id": "fem-010",
+    "nome":"calça jeans",
+    "subcategoria":"jeans",
+    "preco": 89.99,
+    "imagem": "jeans-juvenil.png"
+  }
+]

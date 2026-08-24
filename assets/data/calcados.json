@@ -1,0 +1,137 @@
+[
+  {
+    "id": "fem-001",
+    "nome": "tênis",
+    "subcategoria": "tênis",
+    "preco": 139.99,
+    "imagem": "tenis-branco.png"
+  },
+  {
+    "id": "fem-002",
+    "nome": "sapatênis",
+    "subcategoria": "tênis",
+    "preco": 169.99,
+    "imagem": "sapatenis.png"
+  },
+  {
+    "id": "",
+    "nome": "sandália",
+    "subcategoria":"sandálias",
+    "preco": 79.99,
+    "imagem": "sandalia.png"
+  },
+
+  {
+    "id": "fem-005",
+    "nome": "sandália",
+    "subcategoria": "sandálias",
+    "preco": 99.99,
+    "imagem": "sandalia-masc.png"
+  },
+  {
+    "id": "fem-006",
+    "nome": "chinelo",
+    "subcategoria": "chinelos",
+    "preco": 89.99,
+    "imagem": "chinelo-masc.png"},
+  {
+    "id": "fem-007",
+    "nome": "sandália",
+    "subcategoria": "sandálias",
+    "preco": 129.99,
+    "imagem": "sandalia1.png"
+  },
+  {
+    "id": "sandália",
+    "nome": "sandália",
+    "subcategoria": "sandálias",
+    "preco": 129.99,
+    "imagem": "sandalia4.png"
+
+  },
+  {
+    "id": "fem-008",
+    "nome": "chinelos Havianas",
+    "subcategoria": "chinelos",
+    "preco": 79.99,
+    "imagem": "havaianas.png"
+
+  },
+  {
+    "id": "fem-009",
+    "nome": "chinelos Havaianas",
+    "subcategoria": "chinelos",
+    "preco": 39.99,
+    "imagem": "havaianas1.png"
+  },
+  {
+    "id": "fem-009",
+    "nome": "chinelos Havaianas",
+    "subcategoria": "chinelos",
+    "preco": 79.99,
+    "imagem": "havaianas3.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "tenis",
+    "subcategoria": "tenis",
+    "preco": 79.99,
+    "imagem": "tenis2.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "tenis",
+    "subcategoria": "tenis",
+    "preco": 119.99,
+    "imagem": "tenis-preto.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "tenis",
+    "subcategoria": "tênis",
+    "preco": 109.99,
+    "imagem": "tenis-marrom.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "tênis",
+    "subcategoria": "tênis",
+    "preco": 99.99,
+    "imagem": "tenis-listras.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "tênis",
+    "subcategoria": "tênis",
+    "preco": 89.99,
+    "imagem": "tenis-seta.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "sandália",
+    "subcategoria": "sandália",
+    "preco": 99.99,
+    "imagem": "sandalia-branca.png"
+  },
+  {
+    "id": "relogio",
+    "nome": "sandália",
+    "subcategoria": "sandália",
+    "preco": 89.99,
+    "imagem": "sandalia-preyta.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "tênis",
+    "subcategoria": "tênis",
+    "preco": 109.99,
+    "imagem": "all-star.png"
+  },
+  {
+    "id": "fem-010",
+    "nome":"tênis",
+    "subcategoria":"tênis",
+    "preco": 99.99,
+    "imagem": "vans.png"
+  }
+]

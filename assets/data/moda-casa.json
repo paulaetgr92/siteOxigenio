@@ -1,0 +1,143 @@
+[
+  {
+    "id": "fem-001",
+    "nome": "Colcha",
+    "subcategoria": "Colcha",
+    "preco": 109.99,
+    "imagem": "colcha1.png"
+  },
+  {
+    "id": "fem-002",
+    "nome": "Colcha",
+    "subcategoria": "Colcha",
+    "preco": 129.99,
+    "imagem": "colcha3.png"
+  },
+  {
+    "id": "Colcha",
+    "nome": "",
+    "subcategoria": "Colcha",
+    "preco": 109.99,
+    "imagem": "colcha4.png"
+  },
+  {
+    "id": "fem-004",
+    "nome": "Toalha",
+    "subcategoria": "Toalha",
+    "preco": 79.99,
+    "imagem": "toalhas1.png"
+  },
+  {
+    "id": "fem-005",
+    "nome": "Toalha",
+    "subcategoria": "Toalha",
+    "preco": 89.99,
+    "imagem": "toalhas2.png"
+  },
+  {
+    "id": "fem-006",
+    "nome": "Travesseiro",
+    "subcategoria": "travesseiros",
+    "preco": 69.99,
+    "imagem": "travess.png"},
+  {
+    "id": "fem-007",
+    "nome": "Almofada",
+    "subcategoria": "Almofada",
+    "preco": 69.99,
+    "imagem": "almofada.png"
+  },
+  {
+    "id": "cortina",
+    "nome": "cortinas",
+    "subcategoria": "Cortinas",
+    "preco": 129.99,
+    "imagem": "cortina.png"
+
+  },
+  {
+    "id": "fem-008",
+    "nome": "Protetor Sofá",
+    "subcategoria": "sofás",
+    "preco": 109.99,
+    "imagem": "protetor-sofa.png"
+
+  },
+  {
+    "id": "Toalha bordada",
+    "nome": "Toalha bordada",
+    "subcategoria": "Toalhas",
+    "preco": 59.99,
+    "imagem": "toalhas-listras.png"
+  },
+  {
+    "id": "fem-009",
+    "nome": "protetor de cama",
+    "subcategoria": "Camas",
+    "preco": 159.99,
+    "imagem": "protetor-cama.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "colcha-florida",
+    "subcategoria": "colchas",
+    "preco": 79.99,
+    "imagem": "colcha-florida.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "colcha azul",
+    "subcategoria": "camisetas",
+    "preco": 69.99,
+    "imagem": "colcha-azul.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "Cortinas",
+    "subcategoria": "Cortinas",
+    "preco": 69.99,
+    "imagem": "cortina.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "kit banheiro",
+    "subcategoria": "banheiro",
+    "preco": 119.99,
+    "imagem": "kit-banheiro.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "jogo de cama infantil",
+    "subcategoria": "Kits/jogos",
+    "preco": 39.99,
+    "imagem": "jogo-cama-infantil.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "jogo de cama infantil masc",
+    "subcategoria": "kits/jogos",
+    "preco": 99.99,
+    "imagem": "jogo-cama.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "jogo de lençol",
+    "subcategoria": "Camisetas",
+    "preco": 89.99,
+    "imagem": "jogo-lencol.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "tapete",
+    "subcategoria": "tapetes",
+    "preco": 39.99,
+    "imagem": "tapete.png"
+  },
+  {
+    "id": "fem-010",
+    "nome": "kit banheiro",
+    "subcategoria": "kits/jogos",
+    "preco": 79.99,
+    "imagem": "kit-banheiro.png"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "fem-001",
+    "nome": "Vestido Feminino",
+    "subcategoria": "Vestidos",
+    "preco": 89.99,
+    "imagem": "saia-midi-pliassada.png",
+    "tamanhos": ["38", "40", "42", "44"]
+  },
+  {
+    "id": "fem-002",
+    "nome": "Vestido Estampado",
+    "subcategoria": "Vestidos",
+    "preco": 169.99,
+    "imagem": "vestido-estampado.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-003",
+    "nome": "Vestido Feminino Curto",
+    "subcategoria": "Vestidos",
+    "preco": 89.99,
+    "imagem": "vestido-feminino-curto.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-004",
+    "nome": "Saia Curta",
+    "subcategoria": "Shorts/Saias",
+    "preco": 39.99,
+    "imagem": "saia-curta.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-005",
+    "nome": "Saia Curta Plissada",
+    "subcategoria": "Shorts/Saias",
+    "preco": 79.99,
+    "imagem": "saia-plissada-curta.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-006",
+    "nome": "camiseta com estampa flor",
+    "subcategoria": "Shorts/Saias",
+    "preco": 69.99,
+    "imagem": "camiseta-estampada-flor.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-007",
+    "nome": "saia cinza",
+    "subcategoria": "Shorts/Saias",
+    "preco": 89.99,
+    "imagem": "saia-longa-cinza.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+  "id": "fem-007",
+  "nome": "conjunto fem jogger",
+  "subcategoria": "conjuntos",
+  "preco": 149.99,
+    "imagem": "conjunto-jogger.png",
+  "tamanhos": ["P", "M", "G"]
+},
+  {
+    "id": "fem-008",
+    "nome": "camiseta feminina",
+    "subcategoria": "camisetas",
+    "preco": 59.99,
+    "imagem": "camiseta_azul.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-009",
+    "nome": "vestido franzido",
+    "subcategoria": "vestido",
+    "preco": 139.99,
+    "imagem": "vestido-franzido.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-009",
+    "nome": "saia-colorida",
+    "subcategoria": "vestido",
+    "preco": 139.99,
+    "imagem": "saia-colorida.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "vestido midi",
+    "subcategoria": "vestido",
+    "preco": 179.99,
+    "imagem": "vestido-midi.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "camiseta estampada",
+    "subcategoria": "camisetas",
+    "preco": 59.99,
+    "imagem": "camiseta-estampada-vermelha.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "blusa detalhe manga",
+    "subcategoria": "vestido",
+    "preco": 69.99,
+    "imagem": "blusa-detalhe-manga.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "Macacão Feminino",
+    "subcategoria": "Conjuntos",
+    "preco": 119.99,
+    "imagem": "macacao-feminino.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "vestido longo",
+    "subcategoria": "Vestidos",
+    "preco": 179.99,
+    "imagem": "vestido-longo-plissado.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "vestido midi",
+    "subcategoria": "Vestidos",
+    "preco": 99.99,
+    "imagem": "vestido-midi-verde.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "vestido listras",
+    "subcategoria": "Vestidos",
+    "preco": 79.99,
+    "imagem": "vestido-listras.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "saia listras",
+    "subcategoria": "shorts/saias",
+    "preco": 109.99,
+    "imagem": "saia-listras.png",
+    "tamanhos": ["P", "M", "G"]
+  },
+  {
+    "id": "fem-010",
+    "nome": "blusinha",
+    "subcategoria": "camisetas",
+    "preco": 79.99,
+    "imagem": "blusinha.png",
+    "tamanhos": ["P", "M", "G"]
+  }
+]

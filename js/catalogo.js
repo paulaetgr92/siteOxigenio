@@ -1,58 +1,98 @@
 'use strict';
 
-const params = new URLSearchParams(window.location.search);
-const setor = String(params.get('setor') || 'feminino')
-  .trim()
-  .toLowerCase();
-
-const estado = {
-  limite: 18,
-  cursor: null,
-  carregando: false,
-  terminou: false,
-  ids: new Set()
+const SETORES = {
+  feminino: {
+    titulo: 'Feminino',
+    descricao: 'Peças para vestir todos os seus momentos.'
+  },
+  masculino: {
+    titulo: 'Masculino',
+    descricao: 'Estilo, conforto e praticidade para todos os dias.'
+  },
+  'moda-casa': {
+    titulo: 'Moda Casa',
+    descricao: 'Conforto e beleza para transformar cada ambiente.'
+  },
+  acessorios: {
+    titulo: 'Acessórios',
+    descricao: 'Detalhes que completam o look.'
+  },
+  calcados: {
+    titulo: 'Calçados',
+    descricao: 'Modelos para acompanhar todos os seus passos.'
+  },
+  infantil: {
+    titulo: 'Infantil & Juvenil',
+    descricao: 'Looks alegres, confortáveis e cheios de personalidade.'
+  }
 };
 
-const grid = document.querySelector('#catalogo-grid');
-const status = document.querySelector('#catalogo-status');
-const botao = document.querySelector('#carregar-mais');
-const contador = document.querySelector('#catalogo-contador');
+const params = new URLSearchParams(window.location.search);
+const setor = (params.get('setor') || 'feminino').trim().toLowerCase();
+const config = SETORES[setor];
 
-function moeda(value) {
-  const numero = Number(value);
-
-  if (!Number.isFinite(numero)) {
-    return '';
-  }
-
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(numero);
+if (!config) {
+  window.location.href = '404.html';
+  throw new Error('Setor inválido.');
 }
 
-function card(produto) {
-  const artigo = document.createElement('article');
-  artigo.className = 'produto-card';
+const titulo = document.querySelector('#catalogo-titulo');
+const descricao = document.querySelector('#catalogo-descricao');
+const contador = document.querySelector('#catalogo-contador');
+const status = document.querySelector('#catalogo-status');
+const grid = document.querySelector('#catalogo-grid');
+const carregarMais = document.querySelector('#carregar-mais');
+
+titulo.textContent = config.titulo;
+descricao.textContent = config.descricao;
+document.title = `${config.titulo} | Lojas Oxigênio`;
+
+const estado = {
+  produtos: [],
+  pagina: 1,
+  porPagina: 24
+};
+
+const moeda = new Intl.NumberFormat('pt-BR', {
+  style: 'currency',
+  currency: 'BRL'
+});
+
+function caminhoImagem(produto) {
+  const imagem = String(produto.imagem || '').trim();
+
+  if (!imagem) {
+    return 'assets/images/catalogo-placeholder.svg';
+  }
+
+  if (
+    imagem.startsWith('assets/') ||
+    imagem.startsWith('http://') ||
+    imagem.startsWith('https://') ||
+    imagem.startsWith('data:')
+  ) {
+    return imagem;
+  }
+
+  return `assets/produtos/${setor}/${imagem}`;
+}
+
+function criarCard(produto) {
+  const card = document.createElement('article');
+  card.className = 'produto-card';
 
   const media = document.createElement('div');
   media.className = 'produto-media';
 
   const imagem = document.createElement('img');
   imagem.className = 'produto-imagem';
-  imagem.src =
-    `/api/imagens/item/${produto.item_id}` +
-    `?artigo_id=${encodeURIComponent(produto.id || '')}`;
+  imagem.src = caminhoImagem(produto);
   imagem.alt = produto.nome || 'Produto';
   imagem.loading = 'lazy';
-  imagem.decoding = 'async';
 
-  imagem.addEventListener('error', () => {
-    media.innerHTML =
-      '<div class="produto-imagem-placeholder">' +
-      'Imagem indisponível' +
-      '</div>';
-  });
+  imagem.onerror = () => {
+    imagem.src = 'assets/images/catalogo-placeholder.svg';
+  };
 
   media.appendChild(imagem);
 
@@ -61,8 +101,7 @@ function card(produto) {
 
   const categoria = document.createElement('p');
   categoria.className = 'produto-categoria';
-  categoria.textContent =
-    produto.subcategoria || 'Novidades';
+  categoria.textContent = produto.subcategoria || config.titulo;
 
   const nome = document.createElement('h2');
   nome.className = 'produto-nome';
@@ -70,109 +109,99 @@ function card(produto) {
 
   const preco = document.createElement('strong');
   preco.className = 'produto-preco';
-  preco.textContent = moeda(
-    Number(produto.preco_promocional) > 0
-      ? produto.preco_promocional
-      : produto.preco
-  );
 
-  conteudo.append(categoria, nome, preco);
-  artigo.append(media, conteudo);
+  const valor =
+    produto.precoPromocional ??
+    produto.preco_promocional ??
+    produto.preco;
 
-  return artigo;
+  preco.textContent = Number.isFinite(Number(valor))
+    ? moeda.format(Number(valor))
+    : 'Consulte';
+
+  const tamanhos = document.createElement('p');
+  tamanhos.className = 'produto-tamanhos';
+
+  tamanhos.textContent =
+    Array.isArray(produto.tamanhos) && produto.tamanhos.length
+      ? `Tamanhos: ${produto.tamanhos.join(' · ')}`
+      : '';
+
+  conteudo.append(categoria, nome, preco, tamanhos);
+  card.append(media, conteudo);
+
+  return card;
 }
 
-function atualizar() {
-  botao.disabled = estado.carregando;
-  botao.hidden = estado.terminou;
-  botao.textContent = estado.carregando
-    ? 'Carregando...'
-    : 'Carregar mais produtos';
+function renderizar() {
+  const limite = estado.pagina * estado.porPagina;
+  const produtos = estado.produtos.slice(0, limite);
+
+  grid.innerHTML = '';
+
+  const fragmento = document.createDocumentFragment();
+
+  produtos.forEach((produto) => {
+    fragmento.appendChild(criarCard(produto));
+  });
+
+  grid.appendChild(fragmento);
 
   contador.textContent =
-    `${estado.ids.size} produtos carregados`;
+    `${produtos.length} ${
+      produtos.length === 1
+        ? 'produto carregado'
+        : 'produtos carregados'
+    }`;
+
+  carregarMais.hidden =
+    produtos.length >= estado.produtos.length;
+
+  status.hidden = true;
 }
 
-async function carregar() {
-  if (estado.carregando || estado.terminou) {
-    return;
-  }
-
-  estado.carregando = true;
-  status.hidden = false;
-  status.textContent = 'Carregando produtos...';
-  atualizar();
-
+async function carregarCatalogo() {
   try {
-    const url = new URL(
-      `/api/produtos/${setor}`,
-      window.location.origin
+    status.hidden = false;
+    status.textContent = 'Carregando catálogo...';
+
+    const resposta = await fetch(
+      `assets/data/${setor}.json`,
+      {
+        cache: 'no-store',
+        headers: {
+          Accept: 'application/json'
+        }
+      }
     );
 
-    url.searchParams.set(
-      'limit',
-      String(estado.limite)
-    );
-
-    if (estado.cursor) {
-      url.searchParams.set(
-        'before_id',
-        String(estado.cursor)
+    if (!resposta.ok) {
+      throw new Error(
+        `Arquivo assets/data/${setor}.json não encontrado.`
       );
     }
 
-    const resposta = await fetch(url);
     const dados = await resposta.json();
 
-    if (!resposta.ok || !dados.ok) {
-      throw new Error(
-        dados.detail ||
-        dados.error ||
-        'Não foi possível carregar o catálogo.'
-      );
-    }
+    estado.produtos = Array.isArray(dados)
+      ? dados
+      : dados.produtos || [];
 
-    const fragmento = document.createDocumentFragment();
-    let adicionados = 0;
+    estado.pagina = 1;
+    renderizar();
+  } catch (erro) {
+    console.error('[CATÁLOGO ESTÁTICO]', erro);
 
-    for (const produto of dados.produtos || []) {
-      const chave =
-        `${produto.id}-${produto.item_id}`;
-
-      if (estado.ids.has(chave)) {
-        continue;
-      }
-
-      estado.ids.add(chave);
-      fragmento.appendChild(card(produto));
-      adicionados += 1;
-    }
-
-    grid.appendChild(fragmento);
-    estado.cursor = dados.next_cursor;
-    estado.terminou =
-      !dados.has_more ||
-      !dados.next_cursor ||
-      adicionados === 0;
-
-    status.hidden = estado.ids.size > 0;
-
-    if (estado.terminou && estado.ids.size > 0) {
-      status.hidden = false;
-      status.textContent =
-        'Você chegou ao fim do catálogo.';
-    }
-  } catch (error) {
-    console.error(error);
     status.hidden = false;
-    status.textContent =
-      error.message ||
-      'Não foi possível carregar o catálogo.';
-  } finally {
-    estado.carregando = false;
-    atualizar();
+    status.textContent = erro.message;
+    contador.textContent = '0 produtos carregados';
+    carregarMais.hidden = true;
   }
 }
 
-botao.addEventListener('click', carregar);
-carregar();
+carregarMais.addEventListener('click', () => {
+  estado.pagina += 1;
+  renderizar();
+});
+
+carregarCatalogo();
