@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Novidades | Oxigênio
+  </title>
+
+  <link
+          rel="stylesheet"
+          href="css/styles.css?v=60"
+  >
+
+  <style>
+    .journal {
+      min-height: 100vh;
+      padding: 35px clamp(24px, 6vw, 110px) 120px;
+      background: var(--paper);
+    }
+
+    .journal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .journal-logo { font: 400 38px/1 var(--serif); }
+
+    .journal-back {
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .journal-heading {
+      max-width: 900px;
+      margin: clamp(60px, 9vw, 120px) 0 clamp(50px, 7vw, 90px);
+    }
+
+    .journal-heading span {
+      display: block;
+      margin-bottom: 20px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+    }
+
+    .journal-heading h1 {
+      margin: 0;
+      font: 400 clamp(48px, 7vw, 104px)/.9 var(--serif);
+      letter-spacing: -.045em;
+    }
+
+    .journal-heading p {
+      max-width: 46ch;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ---- artigo ---- */
+    .post {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 80px);
+      align-items: start;
+      padding: clamp(48px, 6vw, 80px) 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .post--flip .post__figure { order: 2; }
+
+    .post__figure {
+      position: relative;
+      margin: 0;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--red-deep);
+    }
+
+    .post__figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .post__number {
+      position: absolute;
+      right: 6%;
+      bottom: 5%;
+      color: #fff;
+      font: 400 clamp(38px, 5vw, 76px)/1 var(--serif);
+      letter-spacing: -.05em;
+      mix-blend-mode: difference;
+    }
+
+    .post__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 22px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .post__tag { color: var(--red); }
+
+    .post__date {
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: .14em;
+    }
+
+    .post__body h2 {
+      margin: 0 0 26px;
+      font: 400 clamp(32px, 4vw, 56px)/.98 var(--serif);
+      letter-spacing: -.035em;
+    }
+
+    .post__lead {
+      margin: 0 0 22px;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .post__body p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .post__body p:last-of-type { margin-bottom: 0; }
+
+    .post__body strong { color: var(--ink); font-weight: 600; }
+
+    .post__cta {
+      display: inline-flex;
+      gap: 30px;
+      margin-top: 34px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      .post { grid-template-columns: 1fr; }
+      .post--flip .post__figure { order: 0; }
+      .post__figure { aspect-ratio: 3 / 2; }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="journal">
+
+  <div class="journal-top">
+    <a class="journal-logo" href="index.html">
+      OXIGÊNIO
+    </a>
+
+    <a class="journal-back" href="index.html">
+      ← VOLTAR
+    </a>
+  </div>
+
+  <div class="journal-heading">
+    <span>THE OXIGÊNIO JOURNAL</span>
+
+    <h1>
+      Novidades,<br>
+      tendências e<br>
+      o que vestir agora.
+    </h1>
+
+    <p>
+      Campanhas, leituras de estação e conversas sobre
+      as peças que chegam às nossas lojas. Aqui a gente
+      escreve sobre moda do jeito que ela acontece na rua.
+    </p>
+  </div>
+
+  <!-- ARTIGO 01 -->
+  <article class="post">
+    <figure class="post__figure">
+      <img
+              src="assets/images/blog-primavera.jpg"
+              alt="Look de primavera com regata listrada e calça bege"
+              loading="lazy"
+      >
+      <span class="post__number">01</span>
+    </figure>
+
+    <div class="post__body">
+      <div class="post__meta">
+        <span class="post__tag">Primavera 2026</span>
+        <span class="post__date">28 de agosto de 2026</span>
+      </div>
+
+      <h2>
+        A primavera não pede permissão.
+      </h2>
+
+      <p class="post__lead">
+        Setembro chega e o armário inteiro parece pesado demais.
+        Não é impressão: é o corpo pedindo tecido que respira,
+        cor que reflete luz e roupa que não precisa de camada por cima.
+      </p>
+
+      <p>
+        A leitura da estação começa pelo <strong>tecido</strong>.
+        Viscose, linho e algodão de trama aberta voltam a dominar as
+        araras porque resolvem o problema mais brasileiro de todos:
+        o dia que amanhece em 18 graus e fecha em 31. São peças que
+        funcionam nas duas pontas do termômetro sem exigir troca de look.
+      </p>
+
+      <p>
+        A silhueta também muda. Depois de temporadas de alfaiataria
+        estruturada, a primavera pede <strong>caimento solto</strong> —
+        vestido reto, calça de cintura confortável, camisa que não marca.
+        A regra prática: se a peça precisa de ajuste para ficar boa,
+        ela provavelmente não é uma peça de primavera.
+      </p>
+
+      <p>
+        E há o gesto mais simples de todos, que quase ninguém faz:
+        tirar do armário o que não vai ser usado. A estação fica mais
+        fácil quando as opções erradas saem da frente.
+      </p>
+
+      <a class="post__cta" href="catalogo.html?setor=feminino">
+        Ver peças de primavera
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </article>
+
+  <!-- ARTIGO 02 -->
+  <article class="post post--flip">
+    <figure class="post__figure">
+      <img
+              src="assets/images/blog-cores.jpg"
+              alt="Blusa verde estampada combinada a calça em tom areia"
+              loading="lazy"
+      >
+      <span class="post__number">02</span>
+    </figure>
+
+    <div class="post__body">
+      <div class="post__meta">
+        <span class="post__tag">Cores da estação</span>
+        <span class="post__date">21 de agosto de 2026</span>
+      </div>
+
+      <h2>
+        Seis cores para atravessar a estação.
+      </h2>
+
+      <p class="post__lead">
+        Toda primavera vem com uma promessa de cor, e quase sempre ela
+        é traduzida errado: não é sobre se vestir de arco-íris. É sobre
+        escolher três tons e saber combiná-los até o verão chegar.
+      </p>
+
+      <p>
+        A base da temporada é confortável — <strong>areia, off-white e
+        caramelo</strong>. São as cores que sustentam o resto: funcionam
+        de manhã, funcionam à noite e não brigam com nada. Se o
+        orçamento é curto, é aqui que ele deve ser gasto, porque essas
+        peças voltam ao corpo várias vezes na semana.
+      </p>
+
+      <p>
+        Por cima delas entram os tons que dão o susto:
+        <strong>verde-limão, lilás e um vermelho quente</strong> —
+        aquele mesmo que a gente carrega no nome. A proporção que
+        funciona é simples: dois neutros para um vibrante. Um acessório
+        cítrico sobre uma base areia resolve o look inteiro sem esforço.
+      </p>
+
+      <p>
+        Uma observação sobre o lilás, que é a cor mais mal compreendida
+        da lista: ele funciona melhor em peça única e volume amplo.
+        Em detalhe pequeno, some. Em conjunto completo, cansa.
+      </p>
+
+      <a class="post__cta" href="catalogo.html?setor=acessorios">
+        Ver acessórios
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </article>
+
+  <!-- ARTIGO 03 -->
+  <article class="post">
+    <figure class="post__figure">
+      <img
+              src="assets/images/blog-estampada.jpg"
+              alt="Blusa de estampa floral em preto e branco com calça clara"
+              loading="lazy"
+      >
+      <span class="post__number">03</span>
+    </figure>
+
+    <div class="post__body">
+      <div class="post__meta">
+        <span class="post__tag">Guia de peças</span>
+        <span class="post__date">14 de agosto de 2026</span>
+      </div>
+
+      <h2>
+        Estampada ou lisa: o dilema da blusinha.
+      </h2>
+
+      <p class="post__lead">
+        É a pergunta que mais ouvimos no provador. E a resposta honesta
+        é que não existe vencedora — existe função. Cada uma resolve um
+        problema diferente do guarda-roupa.
+      </p>
+
+      <p>
+        A <strong>blusinha lisa</strong> é infraestrutura. Ela não é a
+        peça que chama atenção, é a peça que permite que outra chame.
+        Numa gaveta bem montada, ela aparece em três ou quatro tons
+        neutros e é usada mais do que qualquer outra coisa. O critério
+        de compra aqui não é o modelo, é o tecido: se amassa no fim do
+        dia ou perde a forma na terceira lavagem, não vale o espaço.
+      </p>
+
+      <p>
+        A <strong>blusinha estampada</strong> tem a lógica oposta. Ela é
+        o look inteiro. Uma boa estampa dispensa acessório, dispensa
+        segunda peça e resolve a saída de casa em um minuto. O erro
+        comum é comprar estampa por impulso e descobrir depois que ela
+        só combina com uma calça específica — o que a transforma em
+        peça de uso raro.
+      </p>
+
+      <p>
+        O teste que sugerimos é direto: antes de levar uma estampada,
+        pense em <strong>três peças que você já tem</strong> e que
+        funcionariam com ela. Se não vierem três à cabeça, ela vai
+        morar no fundo da gaveta. Com a lisa, esse teste é desnecessário —
+        e é exatamente por isso que ela é a base de tudo.
+      </p>
+
+      <a class="post__cta" href="catalogo.html?setor=feminino">
+        Ver blusas no catálogo
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </article>
+
+</main>
+
+</body>
+</html>
