@@ -1,4 +1,4 @@
-
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -284,9 +284,18 @@
     </div>
 
     <div class="editorial-strip__visual" aria-hidden="true">
-      <span class="shape shape--one"></span>
-      <span class="shape shape--two"></span>
-      <span class="shape shape--three"></span>
+      <video
+              class="editorial-strip__video"
+              autoplay
+              muted
+              loop
+              playsinline
+      >
+        <source
+                src="assets/video/ia-video.mp4"
+                type="video/mp4"
+        >
+      </video>
       <strong>OX / 001</strong>
     </div>
   </section>
@@ -381,8 +390,17 @@
   </div>
 
   <div class="footer__bottom">
-    <span>Instagram</span>
-    <span>TikTok</span>
+    <a
+            href="https://www.instagram.com/lojasoxigenio/"
+            target="_blank"
+            rel="noopener noreferrer"
+    >Instagram</a>
+
+    <a
+            href="https://www.tiktok.com/@lojasoxigeniooficial"
+            target="_blank"
+            rel="noopener noreferrer"
+    >TikTok</a>
     <small>© 2026 Lojas Oxigênio</small>
   </div>
 </footer>
@@ -475,8 +493,3 @@
 </aside>
 </body>
 </html>
-"""
-
-out = Path("/mnt/data/index.html")
-out.write_text(html, encoding="utf-8")
-print(out)
