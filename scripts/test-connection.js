@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 const { getPool, closePool } = require('../src/db');
 
 (async () => {

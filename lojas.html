@@ -17,7 +17,7 @@
 
     <link
             rel="stylesheet"
-            href="css/styles.css?v=61"
+            href="css/styles.css?v=63"
     >
 
 
@@ -92,6 +92,21 @@
         }
 
 
+        .stores-count {
+            margin-top: 26px !important;
+
+            color: var(--red) !important;
+
+            font-size: 10px !important;
+
+            font-weight: 700;
+
+            letter-spacing: .22em;
+
+            text-transform: uppercase;
+        }
+
+
         .stores-heading p {
             max-width: 520px;
 
@@ -102,56 +117,124 @@
 
 
         .stores-list {
-            border-top:
-                    1px solid var(--line);
+            border-top: 1px solid var(--line);
         }
 
 
         .store {
+            position: relative;
+
             display: grid;
 
-            grid-template-columns:
-        70px
-        1fr
-        auto;
+            grid-template-columns: 74px 1fr auto;
 
-            gap: 30px;
+            gap: 32px;
 
             align-items: center;
 
-            min-height: 160px;
+            min-height: 168px;
 
-            border-bottom:
-                    1px solid var(--line);
+            padding: 0 clamp(14px, 2.2vw, 30px);
+
+            border-bottom: 1px solid var(--line);
+
+            transition: background .4s ease;
+        }
+
+
+        /* filete vermelho que cresce da esquerda */
+        .store::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+            bottom: 0;
+
+            width: 2px;
+
+            background: var(--red);
+
+            transform: scaleY(0);
+            transform-origin: bottom;
+
+            transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+        }
+
+
+        .store:hover {
+            background: rgba(165, 31, 42, .04);
+        }
+
+
+        .store:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
         }
 
 
         .store-number {
-            color: var(--red);
+            color: var(--muted);
 
             font-size: 10px;
 
             font-weight: 700;
+
+            letter-spacing: .18em;
+
+            transition: color .35s ease;
+        }
+
+
+        .store:hover .store-number {
+            color: var(--red);
         }
 
 
         .store h2 {
-            margin:
-                    0 0
-                    8px;
+            margin: 0 0 10px;
 
-            font:
-                    400 clamp(30px, 4vw, 52px) / 1
-                    var(--serif);
+            font: 400 clamp(30px, 4vw, 52px) / 1 var(--serif);
+
+            letter-spacing: -.035em;
+
+            transition:
+                    color .35s ease,
+                    transform .45s cubic-bezier(.2, .7, .2, 1);
+        }
+
+
+        .store:hover h2 {
+            color: var(--red);
+
+            transform: translateX(8px);
         }
 
 
         .store p {
             margin: 0;
 
+            max-width: 54ch;
+
             color: var(--muted);
 
             font-size: 13px;
+
+            line-height: 1.65;
+
+            letter-spacing: .01em;
+
+            transition:
+                    color .35s ease,
+                    transform .45s cubic-bezier(.2, .7, .2, 1);
+        }
+
+
+        .store:hover p {
+            color: var(--ink);
+
+            transform: translateX(8px);
         }
 
 
@@ -162,43 +245,81 @@
 
             justify-content: center;
 
-            min-width: 190px;
+            gap: 12px;
 
-            padding:
-                    15px
-                    20px;
+            min-width: 186px;
 
-            border:
-                    1px solid var(--ink);
+            padding: 16px 24px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 999px;
+
+            background: transparent;
 
             font-size: 10px;
 
             font-weight: 700;
 
-            letter-spacing: .13em;
+            letter-spacing: .15em;
+
+            white-space: nowrap;
 
             transition:
-                    background .25s,
-                    color .25s;
+                    background .3s ease,
+                    border-color .3s ease,
+                    color .3s ease;
         }
 
 
-        .store-whatsapp:hover {
-            background: var(--ink);
+        .store-whatsapp span {
+            transition: transform .3s ease;
+        }
+
+
+        .store:hover .store-whatsapp {
+            background: var(--red);
+
+            border-color: var(--red);
 
             color: #fff;
+        }
+
+
+        .store-whatsapp:hover span,
+        .store:hover .store-whatsapp span {
+            transform: translateX(4px);
+        }
+
+
+        .store-whatsapp:focus-visible {
+            outline: 2px solid var(--red);
+
+            outline-offset: 3px;
         }
 
 
         @media (max-width: 700px) {
 
             .store {
-                grid-template-columns:
-          40px
-          1fr;
+                grid-template-columns: 44px 1fr;
 
-                padding:
-                        30px 0;
+                gap: 18px;
+
+                min-height: 0;
+
+                padding: 32px 12px;
+            }
+
+
+            .store h2 {
+                margin-bottom: 8px;
+            }
+
+
+            .store:hover h2,
+            .store:hover p {
+                transform: none;
             }
 
 
@@ -207,7 +328,27 @@
 
                 justify-self: start;
 
-                margin-top: 10px;
+                margin-top: 18px;
+
+                min-width: 0;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .store h2,
+            .store p,
+            .store::before,
+            .store-whatsapp span {
+                transition: none;
+            }
+
+
+            .store:hover h2,
+            .store:hover p {
+                transform: none;
             }
 
         }
@@ -259,20 +400,41 @@
             com nossa equipe pelo WhatsApp.
         </p>
 
+        <p class="stores-count">
+            15 unidades · 6 estados
+        </p>
+
     </div>
-<div>
-    https://lojasoxigenio.com.br/links/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafgnVDNsy_xppDOSKpqpqOmxkGWTGU82jg6azJQwuTg23cispZ7HGQrAq-g7Q_aem_NjIjfjOHMQB0Qc34VYW42g
-</div>
+    <section class="stores-list">
 
+        <!-- LOJA 01 -->
 
+        <article class="store">
+
+            <span class="store-number">
+                01
+            </span>
+
+            <div>
+
+                <h2>
+                    Frutal
+                </h2>
+
+                <p>
+                    Praça da Matriz, 66 · Centro · Frutal/MG
+                </p>
+
+            </div>
 
             <a
                     class="store-whatsapp"
-                    href="https://wa.me/55SEU_NUMERO_LOJA_01"
+                    href="https://wa.me/5534999068808"
                     target="_blank"
                     rel="noopener noreferrer"
             >
-                WHATSAPP →
+                WHATSAPP
+                <span aria-hidden="true">→</span>
             </a>
 
         </article>
@@ -282,29 +444,30 @@
 
         <article class="store">
 
-      <span class="store-number">
-        02
-      </span>
+            <span class="store-number">
+                02
+            </span>
 
             <div>
 
                 <h2>
-                    Nome da Loja 02
+                    Ituiutaba
                 </h2>
 
                 <p>
-                    Cidade · Estado
+                    Rua Vinte e dois, 819 · Centro · Ituiutaba/MG
                 </p>
 
             </div>
 
             <a
                     class="store-whatsapp"
-                    href="https://wa.me/55SEU_NUMERO_LOJA_02"
+                    href="https://wa.me/5534999508858"
                     target="_blank"
                     rel="noopener noreferrer"
             >
-                WHATSAPP →
+                WHATSAPP
+                <span aria-hidden="true">→</span>
             </a>
 
         </article>
@@ -314,33 +477,429 @@
 
         <article class="store">
 
-      <span class="store-number">
-        03
-      </span>
+            <span class="store-number">
+                03
+            </span>
 
             <div>
 
                 <h2>
-                    Nome da Loja 03
+                    Patos de Minas
                 </h2>
 
                 <p>
-                    Cidade · Estado
+                    Rua Major Gote, 601 · Centro · Patos de Minas/MG
                 </p>
 
             </div>
 
             <a
                     class="store-whatsapp"
-                    href="https://wa.me/55SEU_NUMERO_LOJA_03"
+                    href="https://wa.me/5534999048878"
                     target="_blank"
                     rel="noopener noreferrer"
             >
-                WHATSAPP →
+                WHATSAPP
+                <span aria-hidden="true">→</span>
             </a>
 
         </article>
 
+
+        <!-- LOJA 04 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                04
+            </span>
+
+            <div>
+
+                <h2>
+                    Açailândia
+                </h2>
+
+                <p>
+                    Rua Bonaire, 982 · Centro / Setor Rodoviário · Açailândia/MA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5563999496520"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 05 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                05
+            </span>
+
+            <div>
+
+                <h2>
+                    Araguaína
+                </h2>
+
+                <p>
+                    Av. Primeiro de Janeiro, 755 · Centro · Araguaína/TO
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5563999884220"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 06 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                06
+            </span>
+
+            <div>
+
+                <h2>
+                    Gurupi
+                </h2>
+
+                <p>
+                    Av. Pará, 1498 · Qd 12 Lt 06A · Setor Central · Gurupi/TO
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534998169343"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 07 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                07
+            </span>
+
+            <div>
+
+                <h2>
+                    Balsas
+                </h2>
+
+                <p>
+                    Rua Antônio Jacobina, 1225 · Centro · Balsas/MA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534998408808"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 08 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                08
+            </span>
+
+            <div>
+
+                <h2>
+                    Luis Eduardo Magalhães
+                </h2>
+
+                <p>
+                    Rua José Cardoso de Lima, 1141 · Loja 01 · Mimoso do Oeste · Luis Eduardo Magalhães/BA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534999278887"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 09 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                09
+            </span>
+
+            <div>
+
+                <h2>
+                    Corumbá
+                </h2>
+
+                <p>
+                    Rua Dom Aquino, 1759 · Dom Bosco · Corumbá/MS
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534999281545"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 10 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                10
+            </span>
+
+            <div>
+
+                <h2>
+                    Ponta Porã
+                </h2>
+
+                <p>
+                    Av. Marechal Floriano Peixoto, 2162 · Centro · Ponta Porã/MS
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534998216914"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 11 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                11
+            </span>
+
+            <div>
+
+                <h2>
+                    Capanema
+                </h2>
+
+                <p>
+                    Av. Barão de Capanema, 1001 · Centro · Capanema/PA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534999868883"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 12 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                12
+            </span>
+
+            <div>
+
+                <h2>
+                    Belém · Pedreira
+                </h2>
+
+                <p>
+                    Av. Pedro Miranda, 1673 · Pedreira · Belém/PA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534999438884"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 13 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                13
+            </span>
+
+            <div>
+
+                <h2>
+                    Belém · Icoaraci
+                </h2>
+
+                <p>
+                    Rua Manoel Barata, 608 · Cruzeiro (Icoaraci) · Belém/PA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5591986072890"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 14 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                14
+            </span>
+
+            <div>
+
+                <h2>
+                    Paragominas
+                </h2>
+
+                <p>
+                    Rua Presidente Costa e Silva, 10 · Célio Miranda · Paragominas/PA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5591981290388"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
+
+
+        <!-- LOJA 15 -->
+
+        <article class="store">
+
+            <span class="store-number">
+                15
+            </span>
+
+            <div>
+
+                <h2>
+                    Barreiras
+                </h2>
+
+                <p>
+                    Av. Cleriston Andrade, 457 · Juscelino Kubitschek · Barreiras/BA
+                </p>
+
+            </div>
+
+            <a
+                    class="store-whatsapp"
+                    href="https://wa.me/5534998295084"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                WHATSAPP
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </article>
 
     </section>
 

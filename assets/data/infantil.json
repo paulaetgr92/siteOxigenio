@@ -4,134 +4,170 @@
     "nome": "camiseta",
     "subcategoria": "camisetas",
     "preco": 49.99,
-    "imagem": "camiseta-azul-infant.png"
+    "imagem": "camiseta-azul-infant.png",
+    "novo": false,
+    "genero": "unissex"
   },
   {
     "id": "fem-002",
     "nome": "camiseta",
-    "subcategoria": "camiseta",
+    "subcategoria": "camisetas",
     "preco": 49.99,
-    "imagem": "camiseta-masc-marrom.png"
+    "imagem": "camiseta-masc-marrom.png",
+    "novo": false,
+    "genero": "masculino"
   },
   {
     "id": "",
     "nome": "camiseta",
-    "subcategoria":"camiseta",
+    "subcategoria": "camisetas",
     "preco": 39.99,
-    "imagem": "camiseta-masc-vermelha.png"
+    "imagem": "camiseta-masc-vermelha.png",
+    "novo": false,
+    "genero": "masculino"
   },
-
   {
     "id": "fem-005",
     "nome": "camiseta feminina",
     "subcategoria": "camisetas",
     "preco": 39.99,
-    "imagem": "camiseta-meninas.png"
+    "imagem": "camiseta-meninas.png",
+    "novo": false,
+    "genero": "feminino"
   },
   {
     "id": "fem-006",
     "nome": "camiseta",
-    "subcategoria": "camiseta",
+    "subcategoria": "camisetas",
     "preco": 29.99,
-    "imagem": "conjunto-menina.png"},
+    "imagem": "conjunto-menina.png",
+    "novo": false,
+    "genero": "feminino"
+  },
   {
     "id": "fem-007",
     "nome": "conjunto",
     "subcategoria": "conjuntos",
     "preco": 49.99,
-    "imagem": "conjunto-infantil.png"
+    "imagem": "conjunto-infantil.png",
+    "novo": false,
+    "genero": "unissex"
   },
   {
     "id": "conjunto",
     "nome": "conjunto",
-    "subcategoria": "conjunto",
+    "subcategoria": "conjuntos",
     "preco": 149.99,
-    "imagem": "conjunto-rosa-juv.png"
-
+    "imagem": "conjunto-rosa-juv.png",
+    "novo": false,
+    "genero": "feminino"
   },
   {
     "id": "fem-008",
     "nome": "cropped",
-    "subcategoria": "blusinhas",
+    "subcategoria": "croppeds e blusas",
     "preco": 39.99,
-    "imagem": "cropped.png"
-
+    "imagem": "cropped.png",
+    "novo": false,
+    "genero": "feminino"
   },
   {
     "id": "fem-009",
     "nome": "regata",
-    "subcategoria": "camisetas",
+    "subcategoria": "regatas",
     "preco": 19.99,
-    "imagem": "regata-infantil-masc.png"
+    "imagem": "regata-infantil-masc.png",
+    "novo": false,
+    "genero": "masculino"
   },
   {
     "id": "fem-009",
     "nome": "roupa de banho",
-    "subcategoria": "roupa banho",
+    "subcategoria": "moda praia",
     "preco": 39.99,
-    "imagem": "roupa-banho-infantil.png"
+    "imagem": "roupa-banho-infantil.png",
+    "novo": false,
+    "genero": "unissex"
   },
   {
     "id": "fem-010",
     "nome": "shorts",
     "preco": 49.99,
-    "subcategoria": "calcas/shorts",
-    "imagem": "shorts-infantil.png"
+    "subcategoria": "shorts e bermudas",
+    "imagem": "shorts-infantil.png",
+    "novo": false,
+    "genero": "unissex"
   },
   {
     "id": "fem-010",
     "nome": "vestido ",
     "subcategoria": "vestidos",
     "preco": 69.99,
-    "imagem": "vestido-masc-juvenil.png"
+    "imagem": "vestido-masc-juvenil.png",
+    "novo": false,
+    "genero": "feminino"
   },
   {
     "id": "fem-010",
     "nome": "camisa",
-    "subcategoria": "camisetas",
+    "subcategoria": "camisas",
     "preco": 59.99,
-    "imagem": "camisa-azul.png"
+    "imagem": "camisa-azul.png",
+    "novo": false,
+    "genero": "unissex"
   },
   {
     "id": "fem-010",
     "nome": "camiseta",
-    "subcategoria": "camiseta",
+    "subcategoria": "camisetas",
     "preco": 29.99,
-    "imagem": "conjunto-menina.png"
+    "imagem": "conjunto-menina.png",
+    "novo": false,
+    "genero": "feminino"
   },
   {
     "id": "fem-010",
     "nome": "polo",
-    "subcategoria": "camisetas",
+    "subcategoria": "polos",
     "preco": 49.99,
-    "imagem": "polo.png"
+    "imagem": "polo.png",
+    "novo": true,
+    "genero": "unissex"
   },
   {
     "id": "fem-010",
     "nome": "camiseta",
     "subcategoria": "camisetas",
     "preco": 99.99,
-    "imagem": "camisa-azul.png"
+    "imagem": "camisa-azul.png",
+    "novo": true,
+    "genero": "unissex"
   },
   {
     "id": "relogio",
     "nome": "polo",
-    "subcategoria": "camisetas",
+    "subcategoria": "polos",
     "preco": 59.99,
-    "imagem": "polo-floral.png"
+    "imagem": "polo-floral.png",
+    "novo": true,
+    "genero": "feminino"
   },
   {
     "id": "fem-010",
     "nome": "regata",
-    "subcategoria": "regata",
+    "subcategoria": "regatas",
     "preco": 39.99,
-    "imagem": "regata-preta.png"
+    "imagem": "regata-preta.png",
+    "novo": true,
+    "genero": "unissex"
   },
   {
     "id": "fem-010",
-    "nome":"calça jeans",
-    "subcategoria":"jeans",
+    "nome": "calça jeans",
+    "subcategoria": "jeans",
     "preco": 89.99,
-    "imagem": "jeans-juvenil.png"
+    "imagem": "jeans-juvenil.png",
+    "novo": true,
+    "genero": "unissex"
   }
 ]

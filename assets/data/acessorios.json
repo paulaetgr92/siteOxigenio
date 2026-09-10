@@ -2,142 +2,161 @@
   {
     "id": "fem-001",
     "nome": "brinco",
-    "subcategoria": "brincos/colares/aneis",
+    "subcategoria": "brincos",
     "preco": 24.99,
-    "imagem": "brinco.png"
+    "imagem": "brinco.png",
+    "novo": false
   },
   {
     "id": "fem-002",
     "nome": "brinco",
-    "subcategoria": "brincos/colares/aneis",
+    "subcategoria": "brincos",
     "preco": 24.99,
-    "imagem": "brinco2.png"
+    "imagem": "brinco2.png",
+    "novo": false
   },
   {
     "id": "brinco",
     "nome": "brinco",
-    "subcategoria":"brincos/colares/aneis",
+    "subcategoria": "brincos",
     "preco": 24.99,
-    "imagem": "brinco3.png"
+    "imagem": "brinco3.png",
+    "novo": false
   },
   {
     "id": "fem-004",
     "nome": "case",
-    "subcategoria": "mochilas",
+    "subcategoria": "cases",
     "preco": 39.99,
-    "imagem": "case.png"
+    "imagem": "case.png",
+    "novo": false
   },
   {
     "id": "fem-005",
     "nome": "chaveiro",
-    "subcategoria": "mochilas",
+    "subcategoria": "chaveiros",
     "preco": 24.99,
-    "imagem": "chaveiro.png"
+    "imagem": "chaveiro.png",
+    "novo": false
   },
   {
     "id": "fem-006",
     "nome": "chaveiro",
-    "subcategoria": "mochilas",
+    "subcategoria": "chaveiros",
     "preco": 24.99,
-    "imagem": "chaveiro2.png"},
+    "imagem": "chaveiro2.png",
+    "novo": false
+  },
   {
     "id": "fem-007",
     "nome": "colar-brinco",
-    "subcategoria": "colar-brinco",
+    "subcategoria": "colares",
     "preco": 69.99,
-    "imagem": "colar-brinco.png"
+    "imagem": "colar-brinco.png",
+    "novo": false
   },
   {
     "id": "meia",
     "nome": "meias",
     "subcategoria": "meias",
     "preco": 14.99,
-    "imagem": "meia.png"
-
+    "imagem": "meia.png",
+    "novo": false
   },
   {
     "id": "fem-008",
     "nome": "meia",
     "subcategoria": "meias",
     "preco": 14.99,
-    "imagem": "meia1.png"
-
+    "imagem": "meia1.png",
+    "novo": false
   },
   {
     "id": "fem-009",
     "nome": "meia",
     "subcategoria": "meias",
     "preco": 14.99,
-    "imagem": "meia1.png"
+    "imagem": "meia1.png",
+    "novo": false
   },
   {
     "id": "fem-009",
     "nome": "meia",
     "subcategoria": "meias",
     "preco": 14.99,
-    "imagem": "meia2.png"
+    "imagem": "meia2.png",
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "necessaire",
-    "subcategoria": "mochilas",
+    "subcategoria": "bolsas e necessaires",
     "preco": 19.99,
-    "imagem": "pochete.png"
+    "imagem": "pochete.png",
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "relogio",
-    "subcategoria": "relogios",
+    "subcategoria": "relógios",
     "preco": 349.99,
-    "imagem": "relogio.png"
+    "imagem": "relogio.png",
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "relogio",
-    "subcategoria": "relogio",
+    "subcategoria": "relógios",
     "preco": 349.99,
-    "imagem": "relogio1.png"
+    "imagem": "relogio1.png",
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "relogio",
-    "subcategoria": "relogio",
+    "subcategoria": "relógios",
     "preco": 309.99,
-    "imagem": "relogio2.png"
+    "imagem": "relogio2.png",
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "relogio",
-    "subcategoria": "relogio",
+    "subcategoria": "relógios",
     "preco": 359.99,
-    "imagem": "relogio3.png"
+    "imagem": "relogio3.png",
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "relogio",
-    "subcategoria": "relogio",
+    "subcategoria": "relógios",
     "preco": 99.99,
-    "imagem": "relogio4.png"
+    "imagem": "relogio4.png",
+    "novo": true
   },
   {
     "id": "relogio",
     "nome": "relogio",
-    "subcategoria": "relogio",
+    "subcategoria": "relógios",
     "preco": 349.99,
-    "imagem": "relogio5.png"
+    "imagem": "relogio5.png",
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "pulseira",
-    "subcategoria": "brinco/colar/pulseira",
+    "subcategoria": "pulseiras e anéis",
     "preco": 49.99,
-    "imagem": "pulseira.png"
+    "imagem": "pulseira.png",
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "case",
-    "subcategoria": "mochilas",
+    "subcategoria": "cases",
     "preco": 69.99,
-    "imagem": "case2.png"
+    "imagem": "case2.png",
+    "novo": true
   }
 ]

@@ -2,26 +2,42 @@
   {
     "id": "fem-001",
     "nome": "Conjunto Masculino",
-    "subcategoria": "Conjuntos",
+    "subcategoria": "conjuntos",
     "preco": 179.99,
     "imagem": "conjunto-cinza.png",
-    "tamanhos": ["38", "40", "42", "44"]
+    "tamanhos": [
+      "38",
+      "40",
+      "42",
+      "44"
+    ],
+    "novo": false
   },
   {
     "id": "fem-002",
     "nome": "Jaqueta Bomber Masc",
-    "subcategoria": "Jaqueta",
+    "subcategoria": "jaquetas e casacos",
     "preco": 149.99,
     "imagem": "jaqueta-bomber.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-003",
     "nome": "Blusa Masc",
-    "subcategoria": "Blusas",
+    "subcategoria": "blusas e moletons",
     "preco": 89.99,
     "imagem": "blusa-listras.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-004",
@@ -29,71 +45,116 @@
     "subcategoria": "camisas",
     "preco": 119.99,
     "imagem": "camisa-xadrez.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-005",
     "nome": "calca preta social",
-    "subcategoria": "Calças",
+    "subcategoria": "calças",
     "preco": 89.99,
     "imagem": "calca-preta-social.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-006",
     "nome": "bermuda com listras laterais",
-    "subcategoria": "Shorts/bermudas",
+    "subcategoria": "shorts e bermudas",
     "preco": 59.99,
     "imagem": "bermuda-listras-laterais.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-007",
     "nome": "Camiseta Masc",
-    "subcategoria": "Camisetas",
+    "subcategoria": "camisetas",
     "preco": 69.99,
     "imagem": "camiseta-basica-masc.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-007",
     "nome": "calça jeans mac",
-    "subcategoria": "calças",
+    "subcategoria": "jeans",
     "preco": 129.99,
     "imagem": "calca-jeans-masc.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-008",
     "nome": "bermuda básica",
-    "subcategoria": "shorts/bermudas",
+    "subcategoria": "shorts e bermudas",
     "preco": 109.99,
     "imagem": "bermuda-basic.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-009",
     "nome": "camiseta masculina serido",
-    "subcategoria": "Camisetas",
+    "subcategoria": "camisetas",
     "preco": 109.99,
     "imagem": "camiseta-serido.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-009",
     "nome": "camisa manga curta",
-    "subcategoria": "Camisas",
+    "subcategoria": "camisas",
     "preco": 159.99,
     "imagem": "camisa-manga-curta.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "shorts basico",
-    "subcategoria": "shorts/bermudas",
+    "subcategoria": "shorts e bermudas",
     "preco": 79.99,
     "imagem": "shorts-basico.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
@@ -101,62 +162,102 @@
     "subcategoria": "camisetas",
     "preco": 69.99,
     "imagem": "camiseta-gola-v.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "calça jeans com bolso",
-    "subcategoria": "calca jeans",
+    "subcategoria": "jeans",
     "preco": 69.99,
     "imagem": "camiseta-cinza.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "camiseta preta",
-    "subcategoria": "Calça jeans",
+    "subcategoria": "camisetas",
     "preco": 119.99,
     "imagem": "camiseta-preta.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "camiseta",
-    "subcategoria": "Camisetas",
+    "subcategoria": "camisetas",
     "preco": 39.99,
     "imagem": "camiseta-azul.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "shorts cinza",
-    "subcategoria": "shorts/bermudas",
+    "subcategoria": "shorts e bermudas",
     "preco": 99.99,
     "imagem": "shorts-cinza.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "Polo vermelha",
-    "subcategoria": "Camisetas",
+    "subcategoria": "polos",
     "preco": 89.99,
     "imagem": "camiseta-vermelha.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "shorts floral",
-    "subcategoria": "shorts/saias",
+    "subcategoria": "shorts e bermudas",
     "preco": 39.99,
     "imagem": "shorts-floral.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "calça jeans",
-    "subcategoria": "calças",
+    "subcategoria": "jeans",
     "preco": 79.99,
     "imagem": "calca-jean-2.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   }
 ]

@@ -27,6 +27,95 @@ const SETORES = {
   }
 };
 
+/*
+ * Subcategorias fixas por setor.
+ * Setor sem lista aqui monta os filtros
+ * a partir das subcategorias dos produtos.
+ */
+// Setores que se dividem por público antes das subcategorias.
+const GENEROS = {
+  infantil: ['feminino', 'masculino']
+};
+
+const SUBCATEGORIAS = {
+  feminino: [
+    'novis',
+    'biquínis e maiôs',
+    'vestidos',
+    'croppeds e tops',
+    'blusas',
+    'body',
+    'calças',
+    'saias',
+    't-shirts',
+    'tricôs',
+    'shorts e bermudas',
+    'casacos e jaquetas',
+    'jeans',
+    'all black',
+    'conjuntos'
+  ],
+  masculino: [
+    'novis',
+    'camisetas',
+    'polos',
+    'camisas',
+    'calças',
+    'jeans',
+    'shorts e bermudas',
+    'blusas e moletons',
+    'jaquetas e casacos',
+    'conjuntos'
+  ],
+  'moda-casa': [
+    'novis',
+    'colchas e cobertores',
+    'jogos de cama',
+    'lençóis',
+    'travesseiros',
+    'toalhas',
+    'banheiro',
+    'almofadas',
+    'cortinas',
+    'tapetes',
+    'protetores',
+    'aromatizantes'
+  ],
+  acessorios: [
+    'novis',
+    'brincos',
+    'colares',
+    'pulseiras e anéis',
+    'relógios',
+    'meias',
+    'bolsas e necessaires',
+    'chaveiros',
+    'cases'
+  ],
+  calcados: [
+    'novis',
+    'tênis',
+    'sandálias',
+    'chinelos',
+    'sapatos',
+    'botas'
+  ],
+  infantil: [
+    'novis',
+    'camisetas',
+    'regatas',
+    'polos',
+    'camisas',
+    'croppeds e blusas',
+    'vestidos',
+    'conjuntos',
+    'shorts e bermudas',
+    'calças',
+    'jeans',
+    'moda praia'
+  ]
+};
+
 const params = new URLSearchParams(window.location.search);
 const setor = (params.get('setor') || 'feminino').trim().toLowerCase();
 const config = SETORES[setor];
@@ -42,6 +131,8 @@ const contador = document.querySelector('#catalogo-contador');
 const status = document.querySelector('#catalogo-status');
 const grid = document.querySelector('#catalogo-grid');
 const carregarMais = document.querySelector('#carregar-mais');
+const filtros = document.querySelector('#catalogo-filtros');
+const generos = document.querySelector('#catalogo-generos');
 
 titulo.textContent = config.titulo;
 descricao.textContent = config.descricao;
@@ -49,6 +140,8 @@ document.title = `${config.titulo} | Lojas Oxigênio`;
 
 const estado = {
   produtos: [],
+  genero: 'todos',
+  filtro: 'todos',
   pagina: 1,
   porPagina: 24
 };
@@ -133,9 +226,151 @@ function criarCard(produto) {
   return card;
 }
 
+function normalizar(texto) {
+  return String(texto || '')
+    .trim()
+    .toLowerCase();
+}
+
+/*
+ * Peças do público escolhido.
+ * Unissex aparece em ambos.
+ */
+function produtosDoGenero() {
+  if (estado.genero === 'todos') {
+    return estado.produtos;
+  }
+
+  return estado.produtos.filter(
+    (produto) =>
+      produto.genero === estado.genero ||
+      produto.genero === 'unissex'
+  );
+}
+
+function produtosDoFiltro() {
+  const base = produtosDoGenero();
+
+  if (estado.filtro === 'todos') {
+    return base;
+  }
+
+  if (estado.filtro === 'novis') {
+    return base.filter(
+      (produto) => produto.novo === true
+    );
+  }
+
+  return base.filter(
+    (produto) =>
+      normalizar(produto.subcategoria) === estado.filtro
+  );
+}
+
+function contarPorFiltro(chave) {
+  const base = produtosDoGenero();
+
+  if (chave === 'todos') {
+    return base.length;
+  }
+
+  if (chave === 'novis') {
+    return base.filter(
+      (produto) => produto.novo === true
+    ).length;
+  }
+
+  return base.filter(
+    (produto) => normalizar(produto.subcategoria) === chave
+  ).length;
+}
+
+function montarGeneros() {
+  const lista = GENEROS[setor];
+
+  if (!lista) {
+    generos.hidden = true;
+    return;
+  }
+
+  generos.hidden = false;
+  generos.innerHTML = '';
+
+  ['todos', ...lista].forEach((chave) => {
+    const botao = document.createElement('button');
+    botao.type = 'button';
+    botao.className = 'catalogo-genero';
+    botao.dataset.genero = chave;
+    botao.textContent = chave;
+
+    if (chave === estado.genero) {
+      botao.classList.add('is-ativo');
+      botao.setAttribute('aria-current', 'true');
+    }
+
+    botao.addEventListener('click', () => {
+      estado.genero = chave;
+      estado.filtro = 'todos';
+      estado.pagina = 1;
+      montarGeneros();
+      montarFiltros();
+      renderizar();
+    });
+
+    generos.appendChild(botao);
+  });
+}
+
+function montarFiltros() {
+  const lista = SUBCATEGORIAS[setor]
+    ? SUBCATEGORIAS[setor].map(normalizar)
+    : [
+        ...new Set(
+          estado.produtos
+            .map((produto) => normalizar(produto.subcategoria))
+            .filter(Boolean)
+        )
+      ].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  const chaves = ['todos', ...lista];
+
+  filtros.innerHTML = '';
+  filtros.hidden = chaves.length <= 1;
+
+  chaves.forEach((chave) => {
+    const total = contarPorFiltro(chave);
+
+    const botao = document.createElement('button');
+    botao.type = 'button';
+    botao.className = 'catalogo-filtro';
+    botao.dataset.filtro = chave;
+    botao.textContent = chave;
+
+    if (total === 0) {
+      botao.disabled = true;
+      botao.title = 'Nenhuma peça nesta subcategoria';
+    }
+
+    if (chave === estado.filtro) {
+      botao.classList.add('is-ativo');
+      botao.setAttribute('aria-current', 'true');
+    }
+
+    botao.addEventListener('click', () => {
+      estado.filtro = chave;
+      estado.pagina = 1;
+      montarFiltros();
+      renderizar();
+    });
+
+    filtros.appendChild(botao);
+  });
+}
+
 function renderizar() {
   const limite = estado.pagina * estado.porPagina;
-  const produtos = estado.produtos.slice(0, limite);
+  const filtrados = produtosDoFiltro();
+  const produtos = filtrados.slice(0, limite);
 
   grid.innerHTML = '';
 
@@ -155,7 +390,14 @@ function renderizar() {
     }`;
 
   carregarMais.hidden =
-    produtos.length >= estado.produtos.length;
+    produtos.length >= filtrados.length;
+
+  if (!produtos.length) {
+    status.hidden = false;
+    status.textContent =
+      'Nenhuma peça nesta subcategoria por enquanto.';
+    return;
+  }
 
   status.hidden = true;
 }
@@ -188,6 +430,8 @@ async function carregarCatalogo() {
       : dados.produtos || [];
 
     estado.pagina = 1;
+    montarGeneros();
+    montarFiltros();
     renderizar();
   } catch (erro) {
     console.error('[CATÁLOGO ESTÁTICO]', erro);

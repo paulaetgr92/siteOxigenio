@@ -2,161 +2,262 @@
   {
     "id": "fem-001",
     "nome": "Vestido Feminino",
-    "subcategoria": "Vestidos",
+    "subcategoria": "vestidos",
     "preco": 89.99,
     "imagem": "saia-midi-pliassada.png",
-    "tamanhos": ["38", "40", "42", "44"]
+    "tamanhos": [
+      "38",
+      "40",
+      "42",
+      "44"
+    ],
+    "novo": false
   },
   {
     "id": "fem-002",
     "nome": "Vestido Estampado",
-    "subcategoria": "Vestidos",
+    "subcategoria": "vestidos",
     "preco": 169.99,
     "imagem": "vestido-estampado.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-003",
     "nome": "Vestido Feminino Curto",
-    "subcategoria": "Vestidos",
+    "subcategoria": "vestidos",
     "preco": 89.99,
     "imagem": "vestido-feminino-curto.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-004",
     "nome": "Saia Curta",
-    "subcategoria": "Shorts/Saias",
+    "subcategoria": "saias",
     "preco": 39.99,
     "imagem": "saia-curta.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-005",
     "nome": "Saia Curta Plissada",
-    "subcategoria": "Shorts/Saias",
+    "subcategoria": "saias",
     "preco": 79.99,
     "imagem": "saia-plissada-curta.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-006",
     "nome": "camiseta com estampa flor",
-    "subcategoria": "Shorts/Saias",
+    "subcategoria": "t-shirts",
     "preco": 69.99,
     "imagem": "camiseta-estampada-flor.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-007",
     "nome": "saia cinza",
-    "subcategoria": "Shorts/Saias",
+    "subcategoria": "saias",
     "preco": 89.99,
     "imagem": "saia-longa-cinza.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
-  "id": "fem-007",
-  "nome": "conjunto fem jogger",
-  "subcategoria": "conjuntos",
-  "preco": 149.99,
+    "id": "fem-007",
+    "nome": "conjunto fem jogger",
+    "subcategoria": "calças",
+    "preco": 149.99,
     "imagem": "conjunto-jogger.png",
-  "tamanhos": ["P", "M", "G"]
-},
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
+  },
   {
     "id": "fem-008",
     "nome": "camiseta feminina",
-    "subcategoria": "camisetas",
+    "subcategoria": "t-shirts",
     "preco": 59.99,
     "imagem": "camiseta_azul.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-009",
     "nome": "vestido franzido",
-    "subcategoria": "vestido",
+    "subcategoria": "vestidos",
     "preco": 139.99,
     "imagem": "vestido-franzido.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-009",
     "nome": "saia-colorida",
-    "subcategoria": "vestido",
+    "subcategoria": "saias",
     "preco": 139.99,
     "imagem": "saia-colorida.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "vestido midi",
-    "subcategoria": "vestido",
+    "subcategoria": "vestidos",
     "preco": 179.99,
     "imagem": "vestido-midi.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "camiseta estampada",
-    "subcategoria": "camisetas",
+    "subcategoria": "t-shirts",
     "preco": 59.99,
     "imagem": "camiseta-estampada-vermelha.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "blusa detalhe manga",
-    "subcategoria": "vestido",
+    "subcategoria": "blusas",
     "preco": 69.99,
     "imagem": "blusa-detalhe-manga.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "Macacão Feminino",
-    "subcategoria": "Conjuntos",
+    "subcategoria": "conjuntos",
     "preco": 119.99,
     "imagem": "macacao-feminino.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": false
   },
   {
     "id": "fem-010",
     "nome": "vestido longo",
-    "subcategoria": "Vestidos",
+    "subcategoria": "vestidos",
     "preco": 179.99,
     "imagem": "vestido-longo-plissado.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "vestido midi",
-    "subcategoria": "Vestidos",
+    "subcategoria": "vestidos",
     "preco": 99.99,
     "imagem": "vestido-midi-verde.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "vestido listras",
-    "subcategoria": "Vestidos",
+    "subcategoria": "vestidos",
     "preco": 79.99,
     "imagem": "vestido-listras.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "saia listras",
-    "subcategoria": "shorts/saias",
+    "subcategoria": "saias",
     "preco": 109.99,
     "imagem": "saia-listras.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   },
   {
     "id": "fem-010",
     "nome": "blusinha",
-    "subcategoria": "camisetas",
+    "subcategoria": "blusas",
     "preco": 79.99,
     "imagem": "blusinha.png",
-    "tamanhos": ["P", "M", "G"]
+    "tamanhos": [
+      "P",
+      "M",
+      "G"
+    ],
+    "novo": true
   }
 ]

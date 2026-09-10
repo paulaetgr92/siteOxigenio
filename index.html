@@ -11,7 +11,7 @@
 
   <title>Lojas Oxigênio</title>
 
-  <link rel="stylesheet" href="css/styles.css?v=61">
+  <link rel="stylesheet" href="css/styles.css?v=63">
   <script defer src="js/app.js?v=50"></script>
 </head>
 
@@ -79,8 +79,8 @@
     </p>
 
     <h1>
-      O novo básico<br>
-      respira estilo.
+      O contemporâneo é<br>
+      o novo clássico.
     </h1>
 
     <a class="hero__cta" href="#categorias">
@@ -107,6 +107,60 @@
 </header>
 
 <main>
+  <!-- CARTÃO OXIGÊNIO -->
+  <section
+          class="card-strip"
+          id="cartao"
+          aria-labelledby="cartao-title"
+  >
+    <div class="card-strip__copy reveal">
+      <p class="eyebrow eyebrow--red">
+        CARTÃO OXIGÊNIO
+      </p>
+
+      <h2 id="cartao-title">
+        Vantagens que<br>
+        ficam com você.
+      </h2>
+
+      <p class="card-strip__lead">
+        O cartão da nossa casa foi feito para quem volta sempre.
+        Condições pensadas para o dia a dia, sem complicação.
+      </p>
+
+      <ul class="card-strip__list">
+        <li>
+          <strong>Condições exclusivas</strong>
+          <span>Campanhas e descontos reservados a quem tem o cartão.</span>
+        </li>
+
+        <li>
+          <strong>Novidades primeiro</strong>
+          <span>Acesso antecipado às coleções que chegam na loja.</span>
+        </li>
+
+        <li>
+          <strong>Simples de pedir</strong>
+          <span>Solicite com nossa equipe em qualquer unidade Oxigênio.</span>
+        </li>
+      </ul>
+
+      <a class="card-strip__cta" href="lojas.html">
+        Peça o seu em uma loja
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="card-strip__visual reveal" aria-hidden="true">
+      <div class="oxcard">
+        <span class="oxcard__label">CARTÃO</span>
+        <span class="oxcard__brand">OXIGÊNIO</span>
+        <span class="oxcard__chip"></span>
+        <span class="oxcard__foot">SUA LOJA, SEU RITMO</span>
+      </div>
+    </div>
+  </section>
+
   <!-- CATEGORIAS -->
   <section
           class="category-section"
@@ -332,9 +386,7 @@
     <!-- LOJAS -->
     <a
             class="service-card reveal"
-            href="https://lojasoxigenio.com.br/links/?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafgnVDNsy_xppDOSKpqpqOmxkGWTGU82jg6azJQwuTg23cispZ7HGQrAq-g7Q_aem_NjIjfjOHMQB0Qc34VYW42g"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="lojas.html"
     >
       <span>02</span>
 
@@ -354,16 +406,15 @@
     <!-- ATENDIMENTO -->
     <a
             class="service-card reveal"
-            href="https://wa.me/55SEU_NUMERO"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="lojas.html"
     >
       <span>03</span>
 
       <h3>Atendimento</h3>
 
       <p>
-        Fale com nossa equipe pelo WhatsApp.
+        Escolha a unidade mais próxima e fale
+        com nossa equipe pelo WhatsApp.
       </p>
 
       <strong>
@@ -376,33 +427,73 @@
 
 <!-- RODAPÉ -->
 <footer class="footer">
-  <a class="footer__brand" href="#inicio">
-    OXIGÊNIO
-  </a>
 
-  <div class="footer__links">
-    <a href="catalogo.html?setor=feminino">Feminino</a>
-    <a href="catalogo.html?setor=masculino">Masculino</a>
-    <a href="catalogo.html?setor=moda-casa">Moda Casa</a>
-    <a href="catalogo.html?setor=acessorios">Acessórios</a>
-    <a href="catalogo.html?setor=calcados">Calçados</a>
-    <a href="catalogo.html?setor=infantil">Infantil &amp; Juvenil</a>
+  <div class="footer__top">
+
+    <div class="footer__sobre">
+      <a class="footer__brand" href="#inicio">
+        OXIGÊNIO
+      </a>
+
+      <p>
+        Moda, casa, calçados e acessórios em 15 unidades
+        espalhadas por seis estados. Uma vitrine editorial
+        para quem gosta de vestir bem todos os dias.
+      </p>
+
+      <div class="footer__social">
+        <span>Siga a Oxigênio</span>
+
+        <div>
+          <a
+                  href="https://www.instagram.com/lojasoxigenio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+          >Instagram</a>
+
+          <a
+                  href="https://www.tiktok.com/@lojasoxigeniooficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+          >TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Categorias">
+      <h2>Categorias</h2>
+
+      <a href="catalogo.html?setor=feminino">Feminino</a>
+      <a href="catalogo.html?setor=masculino">Masculino</a>
+      <a href="catalogo.html?setor=moda-casa">Moda Casa</a>
+      <a href="catalogo.html?setor=acessorios">Acessórios</a>
+      <a href="catalogo.html?setor=calcados">Calçados</a>
+      <a href="catalogo.html?setor=infantil">Infantil &amp; Juvenil</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Cartão Oxigênio">
+      <h2>Cartão Oxigênio</h2>
+
+      <a href="#cartao">Sobre o cartão</a>
+      <a href="lojas.html">Peça o seu</a>
+      <a href="lojas.html">Vantagens na loja</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Institucional">
+      <h2>Oxigênio</h2>
+
+      <a href="novidades.html">Novidades</a>
+      <a href="lojas.html">Nossas lojas</a>
+      <a href="lojas.html">Atendimento</a>
+    </nav>
+
   </div>
 
   <div class="footer__bottom">
-    <a
-            href="https://www.instagram.com/lojasoxigenio/"
-            target="_blank"
-            rel="noopener noreferrer"
-    >Instagram</a>
-
-    <a
-            href="https://www.tiktok.com/@lojasoxigeniooficial"
-            target="_blank"
-            rel="noopener noreferrer"
-    >TikTok</a>
     <small>© 2026 Lojas Oxigênio</small>
+    <small>15 unidades · 6 estados</small>
   </div>
+
 </footer>
 
 <!-- MENU -->
